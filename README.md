@@ -1,2 +1,2 @@
-# Data-Cleaning-for-Layoffs-Project
+# JOB MARKET EDA
 Cleaned layoffs data in SQL
