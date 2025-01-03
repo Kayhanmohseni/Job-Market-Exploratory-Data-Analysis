@@ -9,14 +9,14 @@
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Data Analysis](#data-analysis)
 - [Results](#results)
-- [Recommendations](#recommendations)
-- [Limitations](#limitations)
-- [References](#references)
+
 
 
 ### Project Overview
 
-Cleaned layoffs data in SQL
+This data analysis project aims to provide insights into the job market between the years 2020 to 2023. By analyzing the data provided for the job market during this time, we seek to find patterns,
+
+
 
 ### Data Sources
 
@@ -29,7 +29,7 @@ Cleaned layoffs data in SQL
 ### Data Cleaning
 
 In the initial data preparation phase, I performed the following tasks: 
-1. dwasd
+1. Cleaned layoffs data in SQL
 2. dada
 
 ### Exploratory Data Analysis
@@ -57,12 +57,3 @@ The analysis results are summarized as follows:
 2. dsd
 3. ds
 4. ds
-
-### Recommendations
-
-### Limitations
-
-### References
-
-1. dfksdfj
-2. dsd
