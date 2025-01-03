@@ -31,7 +31,7 @@ Layoffs Data: The primary dataset used for this analysis is the "layoffs.csv" fi
 
 ### Data Cleaning
 
-In the initial data preparation phase, I performed the following tasks: 
+In the initial data preparation phase which was all done in MySQL Workbench, I performed the following tasks: 
 
 1. Removed all duplicates
 2. Standardized data
