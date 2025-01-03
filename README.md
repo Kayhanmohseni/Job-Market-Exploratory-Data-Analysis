@@ -22,6 +22,7 @@ and compare industries and companies against each other.
 
 ### Data Sources
 
+Layoffs Data: The primary dataset used for this analysis is the "layoffs.csv" file, containing information about the layoffs for each company and industry.
 
 ### Tools
 
@@ -31,16 +32,25 @@ and compare industries and companies against each other.
 ### Data Cleaning
 
 In the initial data preparation phase, I performed the following tasks: 
-1. Cleaned layoffs data in SQL
-2. dada
+
+1. Removed all duplicates
+2. Standardized data
+3. Fixed null/blank values
+4. Remove Unnecessary Columns/Rows
 
 ### Exploratory Data Analysis
 
-EDA involved exploring layoff data to answer key questions below:
+EDA involved exploring layoff data from 2020-2023 to answer key questions below:
 
-- dwswd
-- ddasd
-- dsda
+- What was the maximum amount of layoffs in a day?
+- Which companies no longer exist/went under?
+- Which company had the most layoffs?
+- Which industry had the most layoffs?
+- Which country had the most layoffs?
+- What year had the most layoffs?
+- Which stage had the most layoffs?
+- What year and month had the most layoffs?
+- What were the top 5 companies with the most layoffs each year?
 
 
 ### Data Analysis
@@ -48,8 +58,74 @@ EDA involved exploring layoff data to answer key questions below:
 SQL queries used:
 
 ```sql
-SELECT *
+SELECT Max(total_laid_off), MAX(percentage_laid_off)
 FROM layoffs_staging2;
+
+
+SELECT *
+FROM layoffs_staging2
+WHERE percentage_laid_off = 1
+ORDER BY funds_raised_millions DESC;
+
+
+SELECT company, SUM(total_laid_off)
+FROM layoffs_staging2
+GROUP BY company
+ORDER BY 2 DESC;
+
+
+SELECT industry, SUM(total_laid_off)
+FROM layoffs_staging2
+GROUP BY industry
+ORDER BY 2 DESC;
+
+
+SELECT country, SUM(total_laid_off)
+FROM layoffs_staging2
+GROUP BY country
+ORDER BY 2 DESC;
+
+
+SELECT YEAR(`date`), SUM(total_laid_off)
+FROM layoffs_staging2
+GROUP BY YEAR (`date`)
+ORDER BY 1 DESC;
+
+
+SELECT stage, SUM(total_laid_off)
+FROM layoffs_staging2
+GROUP BY stage
+ORDER BY 2 DESC;
+
+
+WITH Rolling_Total AS
+(SELECT SUBSTRING(`date`,1,7) AS `MONTH`, SUM(total_laid_off) total_off
+FROM layoffs_staging2
+WHERE SUBSTRING(`date`,1,7) IS NOT NULL
+GROUP BY `MONTH`
+ORDER BY 1 ASC
+)
+SELECT `MONTH`, total_off, SUM(total_off) OVER(ORDER BY `MONTH`)
+FROM Rolling_Total;
+
+
+WITH Company_Year (company, years, total_laid_off) AS
+(
+SELECT company, YEAR(`date`), SUM(total_laid_off)
+FROM layoffs_staging2
+GROUP BY company, YEAR(`date`)
+), 
+Company_Year_Rank AS
+(
+SELECT *, DENSE_RANK () OVER (PARTITION BY years ORDER BY total_laid_off DESC) Ranking
+FROM Company_Year
+WHERE years IS NOT NULL
+)
+SELECT *
+FROM Company_Year_Rank
+WHERE Ranking <= 5
+;
+
 ```
 
 ### Results
