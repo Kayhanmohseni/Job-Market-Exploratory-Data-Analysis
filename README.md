@@ -14,7 +14,9 @@
 
 ### Project Overview
 
-This data analysis project aims to provide insights into the job market between the years 2020 to 2023. By analyzing the data provided for the job market during this time, we seek to find patterns,
+This data analysis project aims to provide insights into the job market between the years 2020 to 2023. 
+By analyzing the data provided for the job market during this time, we seek to find any patterns 
+and compare industries and companies against each other. 
 
 
 
