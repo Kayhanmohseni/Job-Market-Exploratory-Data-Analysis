@@ -131,7 +131,12 @@ WHERE Ranking <= 5
 ### Results
 
 The analysis results are summarized as follows:
-1. sds
-2. dsd
-3. ds
-4. ds
+1. The maximum amount of lays off in one day was 12,000
+2. Over 100 companies went out of business
+3. Amazon had the most total layoffs
+4. The consumer industry had the most layoffs 
+5. The United States had the most layoffs compared to other countries
+6. 2022 had the most layoffs
+7. Companies in post-ipo stage had the most layoffs
+8. January 2023 had the most layoffs
+9. Uber, Bytedance, Meta, and Google had the most layoffs during 2020-2023 respectively 
