@@ -5,10 +5,10 @@
 - [Project Overview](#project-overview)
 - [Data Sources](#data-sources)
 - [Tools](#tools)
-- [Data Cleaning/Preparation](#data-cleaning/preparation)
+- [Data Cleaning](#data-cleaning)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Data Analysis](#data-analysis)
-- [Results/Findings](#results/findings)
+- [Results](#results)
 - [Recommendations](#recommendations)
 - [Limitations](#limitations)
 - [References](#references)
@@ -26,7 +26,7 @@ Cleaned layoffs data in SQL
 - MySQL Workbench - Data Cleaning & Exploratory Data Analysis
   - [Download here](https://dev.mysql.com/downloads/installer/)
 
-### Data Cleaning/Preparation
+### Data Cleaning
 
 In the initial data preparation phase, I performed the following tasks: 
 1. dwasd
@@ -50,7 +50,7 @@ SELECT *
 FROM layoffs_staging2;
 ```
 
-### Results/Findings
+### Results
 
 The analysis results are summarized as follows:
 1. sds
