@@ -22,7 +22,7 @@ and compare industries and companies against each other.
 
 ### Data Sources
 
-Layoffs Data: The primary dataset used for this analysis is the "layoffs.csv" file, containing information about the layoffs for each company and industry.
+Layoffs Data: The primary dataset used for this analysis is the "layoffs.csv" file, and contains information about the layoffs for each company and industry.
 
 ### Tools
 
