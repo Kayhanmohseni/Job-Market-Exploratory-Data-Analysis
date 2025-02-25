@@ -1,4 +1,4 @@
-# JOB MARKET Exploratory Data Analysis
+# Job Market Exploratory Data Analysis
 
 ## Table of Contents
 
