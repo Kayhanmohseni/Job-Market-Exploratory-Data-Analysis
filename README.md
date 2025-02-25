@@ -1,4 +1,4 @@
-# JOB MARKET EDA
+# JOB MARKET Exploratory Data Analysis
 
 ## Table of Contents
 
